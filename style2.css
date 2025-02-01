@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Bevan', cursive;
+    font-size: 16px;
+    line-height: 1.3;
+    padding: 32px;
+    background: black;
+    height: 100vh;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #b73659;
+    color: white;
+    font-size: 24px;
+    padding: 8px 16px;
+    text-align: center;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.members{
+    height: 100%;
+    position: relative;
+}
+.one{
+    
+    height: 100%;
+    position: relative;
+}
+.divide {
+    width: calc(60% - 4rem);
+    height: 100vh;
+    position: absolute; 
+    top: 0; 
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+}
+.divide.left{
+    background: purple;
+    clip-path: polygon(0 0,100% 0,75% 100%, 0 100%);
+    left: 0;
+    transition: all 0.5s ease;
+}
+.divide.right{
+    background: #ea2a5e;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%,0 100%);
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+
+.divide .txt{
+    padding: 32px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0)100%);
+}
+.divide h2{
+    font-size: 40px;
+    position: relative;
+    padding-bottom: 32px;
+    
+}
+.divide h2:after{
+    content: '';
+    width: 32px;
+    height: 16px;
+    margin-top: 16px;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+.divide.left h2:after{
+    background: #ea2a5e;
+    left: 0;
+    top: 60%;
+    
+}
+.divide.right h2:after{
+    background:purple;
+    right: 0;
+    top: 60%;
+}
+.divide .description{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 8px;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.divide p{
+    margin-bottom: 8px;
+}
+
+.divide.left .txt{
+    left: 0;
+    padding-right: 120px;
+}
+.divide.right .txt{
+    right: 0;
+    padding-left: 120px;
+    text-align: right;
+}
+
+.divide .more{
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    transition: all 0.5s ease;
+}
+
+
+.divide:hover .more {
+    filter: grayscale(0);
+    transform: scale(1.2);
+}
+
+.divide:hover .description{
+    opacity: 1;
+    max-height: 20rem;
+}
+
+.divide:hover h2:after {
+    width: 6rem;
+}
+
+.divide.left:hover {
+    background: #3298a0;
+}
+
+.divide.right:hover {
+    background: #d4bb32;
+}
+
+.divide.left .more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.divide.right .more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 2nd pair */
+
+.two{
+    height: 100%;
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+}
+.divide2 {
+    width: calc(60% - 4rem);
+    height: 100vh;
+    position: absolute; 
+    top: 0; 
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+}
+
+.divide2.left2 {
+    background: #3298a0; 
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.divide2.right2 {
+    background: #ff6347; 
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+.divide2 .txt{
+    padding: 32px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0)100%);
+}
+.divide2 h2{
+    font-size: 40px;
+    position: relative;
+    padding-bottom: 32px;
+    
+}
+.divide2 h2:after{
+    content: '';
+    width: 32px;
+    height: 16px;
+    margin-top: 16px;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+.divide2.left2 h2:after{
+    background: #ff6347;
+    left: 0;
+    top: 60%;
+    
+}
+.divide2.right2 h2:after{
+    background:#3298a0;
+    right: 0;
+    top: 60%;
+}
+.divide2 .description{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 8px;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.divide2 p{
+    margin-bottom: 8px;
+}
+
+.divide2.left2 .txt{
+    left: 0;
+    padding-right: 120px;
+}
+.divide2.right2 .txt{
+    right: 0;
+    padding-left: 120px;
+    text-align: right;
+}
+
+.divide2 .more{
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    transition: all 0.5s ease;
+}
+
+.divide2:hover .more {
+    filter: grayscale(0);
+    transform: scale(1.2);
+}
+
+.divide2:hover .description{
+    opacity: 1;
+    max-height: 20rem;
+}
+
+.divide2:hover h2:after {
+    width: 6rem;
+}
+
+.divide2.left2:hover {
+    background: pink;
+}
+
+.divide2.right2:hover {
+    background: red;
+}
+
+.divide2.left .more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.divide2.right .more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 3rd pair */
+
+
+.three{
+    height: 100%;
+    position: relative;
+    margin-top: 100px;
+}
+.divide3 {
+    width: calc(60% - 4rem);
+    height: 100vh;
+    position: absolute; 
+    top: 0; 
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+}
+
+.divide3.left3 {
+    background: #3298a0; 
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.divide3.right3 {
+    background: #ff6347; 
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+.divide3 .txt{
+    padding: 32px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0)100%);
+}
+.divide3 h2{
+    font-size: 40px;
+    position: relative;
+    padding-bottom: 32px;
+    
+}
+.divide3 h2:after{
+    content: '';
+    width: 32px;
+    height: 16px;
+    margin-top: 16px;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+.divide3.left3 h2:after{
+    background: #ea2a5e;
+    left: 0;
+    top: 60%;
+    
+}
+.divide3.right3 h2:after{
+    background:purple;
+    right: 0;
+    top: 60%;
+}
+.divide3 .description{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 8px;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.divide3 p{
+    margin-bottom: 8px;
+}
+
+.divide3.left3 .txt{
+    left: 0;
+    padding-right: 120px;
+}
+.divide3.right3 .txt{
+    right: 0;
+    padding-left: 120px;
+    text-align: right;
+}
+
+.divide3 .more{
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    transition: all 0.5s ease;
+}
+
+.divide3:hover .more {
+    filter: grayscale(0);
+    transform: scale(1.2);
+}
+
+.divide3:hover .description{
+    opacity: 1;
+    max-height: 320px;
+}
+
+.divide3:hover h2:after {
+    width: 96px;
+}
+
+.divide3.left3:hover {
+    background: greenyellow;
+}
+
+.divide3.right3:hover {
+    background: #d4bb32;
+}
+
+
+
+
